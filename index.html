@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>WeatherApp - VanillaJs</title>
+  <title>Easy WeatherApp</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Get current weather, search for city or country."/>
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="mobile-web-app-title" content="Easyweather">
+<meta name="apple-mobile-web-app-title" content="Easyweather">
+
+<meta name="mobile-web-app-status-bar" content="black">
+<meta name="apple-mobile-web-app-status-bar" content="black">
+<link rel="shortcut icon" sizes="50x50" href="img/weather-50x50.png">
+
+<!--link rel="apple-touch-icon-precomposed" sizes="152x152" href="icon-152x152.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="icon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="icon-120x120.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="icon-114x114.png">
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="icon-76x76.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="icon-72x72.png"-->
+
     <link rel="stylesheet" href="css/style.css"/>
-  	<link rel="favicon" type="image/png" href="img/weather.png"/>
+<link rel="stylesheet" type="text/css" href="css/addtohomescreen.css">  	
 </head>
 <body>
 <section class="top-banner">
@@ -32,4 +50,23 @@
 </body>
 <script src="js/jquery-3.5.1.js"></script>
 <script src="js/weather.js"></script>
+<script src="js/addtohomescreen.js"></script>
+<script type="text/javascript">
+var a = addToHomescreen({
+	onAdd: function () {
+		alert('Added successfully to homescreen!');
+	}
+});
+// addToHomescreen.removeSession();     // use this to remove the localStorage variable
+var ath = addToHomescreen({
+    debug: 'android',           // activate debug mode in ios emulation
+    skipFirstVisit: false,	// show at first access
+    startDelay: 0,          // display the message right away
+    lifespan: 0,            // do not automatically kill the call out
+    displayPace: 0,         // do not obey the display pace
+    privateModeOverride: true,	// show the message in private mode
+    maxDisplayCount: 0      // do not obey the max display count
+});
+// ath.clearSession();      // reset the user sessio
+</script>
 </html>

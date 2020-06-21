@@ -1,0 +1,16 @@
+{
+  "name": "Easyweather",
+  "icons": [
+ {
+  "src": "img/weather-50x50.png",
+  "sizes": "114x121",
+  "type": "image\/png",
+  "density": "0.75"
+ },
+  {
+  "src": "img/weather-50x50.png",
+  "sizes": "114x121",
+  "type": "image\/png",
+  "density": "1.0"
+} 
+ 
